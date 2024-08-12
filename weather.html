@@ -28,11 +28,7 @@
 <script>
     fetch('http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1078a4bc5d52a884dc4877319f3b858b', {
         method: 'GET',
-        header:= w.Header()
-header.Add("Access-Control-Allow-Origin", "*")
-header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
-header.Add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
-        headers: {
+        header: {
             'Authorization': 'Bearer 1078a4bc5d52a884dc4877319f3b858b',
         }
     })
