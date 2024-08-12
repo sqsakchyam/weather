@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styleweather.css">
+</head>
+
+<!-- <body class="bg-primary d-flex align-items-center justify-content-center vh-100">
+    <div id="weather-container" class="bg-light bg-opacity-50 rounded-4 p-4 text-center shadow">
+        <h2 class="text-white">Weather App</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="city" class="form-control rounded-start" placeholder="Enter city">
+            <button class="btn btn-secondary rounded-end" onclick="displayCity()">Search</button>
+        </div>
+
+        <img id="weather-icon" class="img-fluid d-none mx-auto mb-3" alt="Weather Icon">
+
+        <div id="temp-div" class="display-1 text-white"></div>
+
+        <div id="weather-info" class="h5 text-white"></div>
+
+        <div id="hourly-forecast" class="d-flex mt-4 overflow-auto"></div>
+    </div> -->
+<script>
+    fetch('http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1078a4bc5d52a884dc4877319f3b858b', {
+        method: 'GET',
+        header:= w.Header()
+header.Add("Access-Control-Allow-Origin", "*")
+header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
+header.Add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
+        headers: {
+            'Authorization': 'Bearer 1078a4bc5d52a884dc4877319f3b858b',
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
