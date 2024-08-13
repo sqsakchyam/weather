@@ -28,14 +28,11 @@
     <script>
         function getweather() {
             const city = document.getElementById('city').value;
+            apiurl = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1078a4bc5d52a884dc4877319f3b858b'
+            apikey = '1078a4bc5d52a884dc4877319f3b858'
         }
 
-        fetch('https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1078a4bc5d52a884dc4877319f3b858b', {
-            method: 'GET',
-            header: {
-                'Authorization': 'Bearer 1078a4bc5d52a884dc4877319f3b858b',
-            }
-        })
+        fetch(apiurl)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
