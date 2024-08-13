@@ -26,6 +26,10 @@
         <div id="hourly-forecast" class="d-flex mt-4 overflow-auto"></div>
     </div>
     <script>
+        function getweather() {
+            const city = document.getElementById('city').value;
+        }
+
         fetch('https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=1078a4bc5d52a884dc4877319f3b858b', {
             method: 'GET',
             header: {
